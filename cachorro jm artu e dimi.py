@@ -1,11 +1,12 @@
 class Cachorro:
-    def __init__(self, nome, idade, raca, comida):
+    def __init__(self, nome, idade, raca, comida, energia):
         self.nome = nome
         self.idade = idade
         self.raca = raca
         self.comida = comida
         self.acordado = False
         self.feliz = False
+        self.energia = 100
 
     def acordar (self):
         self.acordado = True
@@ -13,10 +14,12 @@ class Cachorro:
     
     def dormir (self):
         self.acordado = False
+        energia = 100
         print(f"{self.nome} está dormindo!")
         
     def brincar (self):
         self.feliz = True
+        self.energia =-20
         print(f"{self.nome} está remoendo seu passado e seus erros equanto se pune pelas proprias ações se perguntando se um dia chegarão as consequencias e se a vida dele realmente tem sentido")
 
     def ignorar (self):
@@ -41,6 +44,7 @@ class Cachorro:
        print(f"Comida: {self.comida}")
        print(f"Acordado: {self.acordado}")
        print(f"Feliz: {self.feliz}")
+       print(f"Energia": {self.energia}")
        
 cachorro1 = Cachorro("Júlio Cesar", 18, "Desgrassê", 0)
 
@@ -48,5 +52,6 @@ cachorro1.exibirStatus()
 cachorro1.dormir()
 cachorro1.acordar()
 cachorro1.brincar()
+
 
 print(cachorro1)
